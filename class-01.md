@@ -33,3 +33,10 @@ async function test(cityName) {
 }
 
 test('amman');
+
+## Explain promises as though you were mentoring a Code 301 level student:
+***A Promise object is simply a wrapper around a value that may or may not be known when the object is instantiated and provides a method for handling the value after it is known (also known as resolved) or is unavailable for a failure reason (we'll refer to this as rejected ).***
+
+## Are all callback functions considered to be Asynchronous? Why or Why Not?
+**Callbacks that you call yourself are regular function calls, which are always synchronous. Certain native APIs (eg, AJAX, geolocation, Node.js disk or network APIs) are asynchronous and will execute their callbacks later in the event loop. If you call a callback synchronously from within an async callback, it will end up being async too.***
+
